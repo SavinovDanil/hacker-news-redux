@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import store from './store/store';
 import AppRouter from './components/AppRouter';
 // import MainPage from '../src/components/MainPage/MainPage'
@@ -8,9 +8,9 @@ import AppRouter from './components/AppRouter';
 function App() {
   return (
     <BrowserRouter>
-    <Provider store={store}>
-      <AppRouter/>
-    </Provider>
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
     </BrowserRouter>
   );
 }
