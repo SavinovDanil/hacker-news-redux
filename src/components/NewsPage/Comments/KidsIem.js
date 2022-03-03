@@ -13,9 +13,12 @@ const KidsItem = ({ kid }) => {
       <div id={`parentKid${kid.id}`}>
         <CommentText text={kid.text} />
       </div>
-      <strong>
-        <ClockCircleOutlined /> {date.format('LTS')} 📅 {date.format('LL')}
-      </strong>
+      <div className="comment-time">
+        <div className="hours">
+          <ClockCircleOutlined /> {date.format('LTS')}{' '}
+        </div>
+        <div>📅 {date.format('LL')} </div>
+      </div>
     </div>
   );
 };

@@ -11,8 +11,8 @@
 
   .item-desc {
     width: 100%;
-    padding:10px 20px;
-    h4{
+    padding: 10px 20px;
+    h4 {
       margin: 0;
       margin-bottom: 10px;
     }
@@ -20,7 +20,7 @@
 
   .item-time {
     min-width: 13%;
-    margin:0 15px;
+    margin: 0 15px;
     padding: 0 10px;
     border-right: 1px solid #000000;
   }
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .item-link{
+    .item-link {
       display: flex;
       align-items: center;
     }
@@ -40,7 +40,6 @@
         align-items: center;
         padding-right: 5px;
         margin-right: 5px;
-        border-right: 1px solid #000000;
       }
     }
   }
@@ -48,12 +47,15 @@
 
 .com-list {
   .com-list-main {
+    h2 {
+      text-align: center;
+    }
     .comment {
-      padding:20px 20px 15px 20px;
+      padding: 20px 20px 15px 20px;
       background-color: #f6f6ef;
       margin-bottom: 5px;
       border-radius: 10px;
-      .comment-descr{
+      .comment-descr {
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -61,14 +63,13 @@
         .comment-time {
           display: flex;
           align-items: center;
-          .hours{
+          .hours {
             width: 85px;
             justify-content: space-between;
             display: flex;
             align-items: center;
             margin-right: 10px;
-          } 
-
+          }
         }
       }
     }
@@ -80,17 +81,14 @@
     justify-content: space-between;
     padding: 4px 15px;
     margin-bottom: 5px;
-    h3{
+    h3 {
       margin: 0;
     }
   }
 }
 
-
-
-
 .comments {
-  p{
+  p {
     margin: 0;
   }
 }
@@ -99,15 +97,14 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  border:none;
+  border: none;
   color: #001529;
   background: transparent;
   cursor: pointer;
-  span{
+  span {
     margin-right: 5px;
   }
 }
-
 
 .update:hover {
 }

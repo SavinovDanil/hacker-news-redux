@@ -1,53 +1,69 @@
 @import '~antd/dist/antd.css';
-html {
-  scroll-behavior: smooth;
-}
-
-.news {
-  font-family: Verdana, Geneva, sans-serif;
-  padding-left: 5px;
-  padding-top: 10px;
-  align-items: center;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-  .title {
-    display: flex;
-    cursor: pointer;
-    b {
-      margin-right: 5px;
-    }
-    p {
-      margin: 0;
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 8px;
+  background-color: #f6f6ef;
+  padding: 0;
+  h2 {
+    margin: 0;
     font-size: 10pt;
+    line-height: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, sans-serif;
   }
-  .info {
-    font-size: 14px;
+  .heading {
+    padding: 10px 30px;
     display: flex;
-    
-    opacity: 0.5;
-    .info-user {
-      &.name {
-        min-width: 150px;
-        border-right: 1px solid rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6600;
+  }
+  .news {
+    font-family: Verdana, Geneva, sans-serif;
+    padding-left: 5px;
+    padding-top: 10px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    .title {
+      display: flex;
+      cursor: pointer;
+      b {
+        margin-right: 5px;
       }
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
+      p {
+        margin: 0;
+      }
+      font-size: 10pt;
     }
-    .by {
-      padding-right: 10px;
-    }
-    .info-r {
-      margin-right: 10px;
+    .info {
+      font-size: 14px;
       display: flex;
-    }
-    .info-time {
-      display: flex;
-      width: 20%;
-      justify-content: space-between;
-      div {
+      opacity: 0.5;
+      .info-user {
         display: flex;
         align-items: center;
+        margin-left: 10px;
+        &.name {
+          min-width: 150px;
+          border-right: 1px solid rgba(0, 0, 0, 0.85);
+        }
+      }
+      .by {
+        padding-right: 10px;
+      }
+      .info-r {
+        margin-right: 10px;
+        display: flex;
+      }
+      .info-time {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

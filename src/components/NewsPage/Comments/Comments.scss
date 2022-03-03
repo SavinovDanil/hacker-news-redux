@@ -1,41 +1,51 @@
-
 .kid {
-	margin-left: 30px;
-	padding: 10px;
-	font-size: 12px;
-	background-color: transparent;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	border:1px solid grey;
+  margin-left: 30px;
+  padding: 10px;
+  font-size: 12px;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  .comment-time {
+    display: flex;
+    align-items: center;
+    .hours {
+      width: 85px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+  }
 
-	h6 {
-		font-size: 20px;
-		margin: 0;
-	}
-	p{
-		margin: 0;
-	}
+  h6 {
+    font-size: 20px;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
-.btn-def{
-    display: inline;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 35px;
-	margin-left: 10px;
-	padding-right: 10px;
+.btn-def {
+  display: inline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35px;
+  margin-left: 10px;
+  padding-right: 10px;
 }
 .btn__more {
-	margin-left: 7px;
-	display: flex;
-	align-items: center;
-	color: #ffc107;
-	cursor: pointer;
-	border: 0;
-	transition: color .15s ease-in-out;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  color: #ffc107;
+  cursor: pointer;
+  border: 0;
+  transition: color 0.15s ease-in-out;
 }
 
 .btn__more:hover {
-	color: #8b6e14;
+  color: #8b6e14;
 }
