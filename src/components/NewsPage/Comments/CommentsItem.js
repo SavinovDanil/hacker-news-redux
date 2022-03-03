@@ -9,27 +9,29 @@ const CommentsItem = ({ comment, kids, getKidsComments}) => {
 	const date = moment.unix(comment.time);
 
 	return (
-		// <Media>
-		// 	<Media.Body style={{padding:"2%"}}>
-		<div>
-
-			<h5 style={{fontWeight:"700",fontSize:"20px"}}>{comment.by}</h5>
-			<div style={{marginLeft:"2%"}}>
+		<div className='comment'>
+			<b>{comment.by}</b>
+			<div className='comment-text'>
 				<CommentText text={comment.text}/>
 			</div>
-			<strong style={{fontSize:"12px"}}>
-				<ClockCircleOutlined/> {date.format('LTS')} 📅 {date.format('LL')} {comment.kids 
-						? <div className='btn__more' onClick={ () => {getKidsComments(comment.kids)} }> <CommentOutlined/> {comment.kids.length}</div>
-						: <div className='btn'><CommentOutlined/> 0</div>
+			<div className='comment-descr'>
+				<div className='comment-time'>
+					<div className='hours'>
+						<ClockCircleOutlined/> {date.format('LTS')}
+					</div>
+				📅 {date.format('LL')}
+				</div>
+				  {comment.kids 
+						? <div className='btn__more' onClick={ () => {getKidsComments(comment.kids)} }>
+							 <CommentOutlined/> {comment.kids.length}</div>
+						: <div className='btn-def'><CommentOutlined/> 0</div>
 						}
-			</strong>
+			</div>
 			{kids.length && kids[0].parent === comment.id
 				? kids.map(item => <KidsItem kid={item} key={item.id} />)
 				: <div></div>
 			}
 		</div>
-		// 	</Media.Body>
-		// </Media>
 	)
 }
 

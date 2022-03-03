@@ -8,6 +8,7 @@ html {
   padding-left: 5px;
   padding-top: 10px;
   align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   .title {
     display: flex;
     cursor: pointer;
@@ -22,16 +23,31 @@ html {
   .info {
     font-size: 14px;
     display: flex;
+    
     opacity: 0.5;
+    .info-user {
+      &.name {
+        min-width: 150px;
+        border-right: 1px solid rgba(0, 0, 0, 0.85);
+      }
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
     .by {
       padding-right: 10px;
-      border-right: 1px solid rgba(0, 0, 0, 0.85);
     }
     .info-r {
       margin-right: 10px;
-      .name {
-        display: inline-block;
-        min-width: 150px;
+      display: flex;
+    }
+    .info-time {
+      display: flex;
+      width: 20%;
+      justify-content: space-between;
+      div {
+        display: flex;
+        align-items: center;
       }
     }
   }

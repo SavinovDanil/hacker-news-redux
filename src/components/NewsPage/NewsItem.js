@@ -16,22 +16,24 @@ export default function NewsItem({ newsProfile, commentsCount }) {
         </div>
       </div>
       <div className="item-desc">
-        <h2>
-          <strong>{newsProfile.title}</strong>
-        </h2>
+        <h4>
+          {newsProfile.title}
+        </h4>
         <div className="item_info">
-          <div>
-            <UserOutlined /> {newsProfile.by}
+          <div className='item_icon'>
+            <div>
+              <UserOutlined /> <span>{newsProfile.by}</span>  
+            </div>
+            <div>
+              <CommentOutlined /> {newsProfile.kids ? <span>{commentsCount}</span> : <span>{0}</span>}{' '}
+            </div>
           </div>
-          <div>
-            <CommentOutlined /> {newsProfile.kids ? commentsCount : 0}{' '}
-          </div>
+            <a rel="noreferrer" target="_blank" href={`${newsProfile.url}`}>
+              <div className='item-link'>
+                  <ArrowRightOutlined /> <span>Link</span>
+              </div>
+            </a>
         </div>
-        <a rel="noreferrer" target="_blank" href={`${newsProfile.url}`}>
-          <h2>
-            <ArrowRightOutlined /> <span>{newsProfile.url}</span>
-          </h2>
-        </a>
       </div>
     </div>
   );

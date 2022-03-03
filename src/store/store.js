@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import mainReducer from './reducers/main';
 import newsReducer from './reducers/news';
-import { composeWithDevTools } from '@redux-devtools/extension';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 let rootReducer = combineReducers({
   mainPage: mainReducer,

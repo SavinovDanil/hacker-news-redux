@@ -1,10 +1,16 @@
-import { Layout } from 'antd'
 import React from 'react'
 import styles from './Loader.module.scss'
-export default function Loader() {
+import {SyncOutlined} from '@ant-design/icons'
+
+const Loader = () => {
     return (
-        <Layout.Content className={styles.body}>
-            <div className={styles.loading}>Loading News</div>
-        </Layout.Content>
+      <div className={styles.body}>
+        <SyncOutlined spin />
+      </div>
     )
 }
+
+export default Loader
+
+
+

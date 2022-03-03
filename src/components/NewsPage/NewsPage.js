@@ -1,7 +1,7 @@
 import { SyncOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import React from 'react';
-import Link from '../back/BackButton';
+import BackButton from '../back/BackButton';
 import Comments from './Comments/Comments';
 import NewsItem from './NewsItem';
 
@@ -15,18 +15,18 @@ export default function NewsPage({
   deleteCommentsCount,
 }) {
   return (
-    <Layout.Content style={{ margin: '100px 150px' }}>
-      <Link path="/" />
+    <Layout.Content style={{ margin: '10px 100px' }}>
+      <BackButton path="/" />
       <NewsItem newsProfile={newsProfile} commentsCount={commentsCount} />
-      <div>
-        <h2>
-          <strong>Comments</strong>
-        </h2>
-        <button className="update" onClick={() => updateComments(newsProfile.kids)}>
-          <SyncOutlined />
-          <strong> update</strong>
-        </button>
-        <div style={{ marginTop: '30px' }}>
+      <div className='com-list'>
+        <div className='com-list-heading'>
+          <h3>Comments</h3>
+          <button className="update" onClick={() => updateComments(newsProfile.kids)}>
+            <SyncOutlined />
+            <b> update comments</b>
+          </button>
+        </div>
+      <div className='com-list-main'>
           {comments.length ? (
             <Comments
               comments={comments}
@@ -36,9 +36,10 @@ export default function NewsPage({
               deleteCommentsCount={deleteCommentsCount}
             />
           ) : (
-            <h5>No comments</h5>
+            <h2>No comments</h2>
           )}
-        </div>
+      </div>
+
       </div>
     </Layout.Content>
   );

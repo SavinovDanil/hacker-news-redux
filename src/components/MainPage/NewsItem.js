@@ -19,16 +19,34 @@ export default function NewsItem({ news, index }) {
       </div>
       <div className="info">
         <div className="info-r">
-          <UserOutlined /> <span className="by name">{news.by}</span> <CommentOutlined />{' '}
-          {news.kids ? (
-            <span className="by">{news.kids.length}</span>
-          ) : (
-            <span className="by">{0}</span>
-          )}{' '}
-          <StarOutlined /> <span className="by">{news.score}</span>
+          <div className='info-user name'>
+            <UserOutlined /> 
+            <span className="by">{news.by}</span> 
+          </div>
+          <div className='info-user'>
+            <div className='info-user'>
+              <CommentOutlined />{' '}
+              {news.kids ? (
+                <span className="by">{news.kids.length}</span>
+              ) : (
+                <span className="by">{0}</span>
+              )}{' '}
+            </div>
+            <div className='info-user'>
+              <StarOutlined /> 
+              <span className="by">{news.score}</span>
+            </div>
+          </div>
+
         </div>
-        <div>
-          <ClockCircleOutlined /> {date.format('LTS')} 📅 {date.format('LL')}
+        <div className='info-time'>
+          <div>
+            <ClockCircleOutlined /> {date.format('LTS')}
+          </div>
+          <div>
+            📅 {date.format('LL')}
+          </div>
+           
         </div>
       </div>
     </div>

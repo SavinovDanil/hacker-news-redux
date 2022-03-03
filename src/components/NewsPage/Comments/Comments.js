@@ -1,11 +1,12 @@
 import { LoadingOutlined } from '@ant-design/icons';
 import React from 'react';
 import CommentsItem from './CommentsItem';
+import './Comments.scss'
 
 const Comments = ({ comments, getKidsComments, kids, 
 	commentsLength, deleteCommentsCount }) => {
 		return (
-			<> 
+			< > 
 				{comments.length && comments.length !== commentsLength - deleteCommentsCount
 					? <LoadingOutlined style={{fontSize:"40px"}}/>
 					: comments.map(item => <CommentsItem comment={item} 
