@@ -7,8 +7,9 @@ import AppRouter from './components/AppRouter';
 // import MainPage from '../src/components/MainPage/MainPage'
 
 function App() {
+  console.log(process.env.PUBLIC_URL);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/hacker-news-redux">
       <Provider store={store}>
         <AppRouter />
       </Provider>
